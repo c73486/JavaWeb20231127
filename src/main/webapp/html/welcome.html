@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>歡迎頁</title>
+		<link rel="stylesheet" href="../css/demo.css">	
+	</head>
+	
+	<body onload="ShowTime">
+		<div id="showbox"></div>
+		<h1 class="my_red_color">歡迎光臨</h1>
+		<h2>現在時間09:02:00</h2>
+		<p>
+  			現在日期：<time style="color:#f00;">2022-12-01</time>
+ 			 <br>
+  			現在時間：<time style="color:#09f;">12:01:01</time>
+		</p>
+		<img src="../image/wow.jpg">
+	</body>
+</html>
+<script language="JavaScript">
+			function ShowTime(){
+　				var NowDate=new Date();
+　				var h=NowDate.getHours();
+　				var m=NowDate.getMinutes();
+　				var s=NowDate.getSeconds();　
+　				document.getElementById('showbox').innerHTML = h+'時'+m+'分'+s+'秒';
+　				setTimeout('ShowTime()',1000);
+			}
+		</script>
